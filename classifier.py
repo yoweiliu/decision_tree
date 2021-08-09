@@ -3,7 +3,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 from sklearn import tree
 
-df = pd.read_csv("raw_data", delim_whitespace=True)
+df = pd.read_csv("./data/raw_data", delim_whitespace=True)
 # print(df)
 
 ## 手動編碼不同特徵

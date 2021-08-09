@@ -10,7 +10,7 @@ from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split
 
 # (dataframe 對齊未修正)
-df = pd.read_csv("raw_data", delim_whitespace=True)
+df = pd.read_csv("./data/raw_data", delim_whitespace=True)
 
 
 features = list(df.columns[:4])
