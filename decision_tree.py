@@ -23,10 +23,10 @@ x_train, x_test, y_train, y_test = train_test_split(
 
 
 
-""" 
-繪製決策邊界
-以2維特徵繪圖，會是平面的形式
-以3維特徵，則是立體三度空間的形式
+""" 繪製決策邊界
+
+    以2維特徵繪圖，會是平面的形式
+    以3維特徵，則是立體三度空間的形式
 """
 
 
@@ -83,9 +83,10 @@ dot_data = tree.export_graphviz(classifier, out_file=None,
                                 feature_names=features,
                                 class_names=["不能打羽球", "可以打羽球"],
                                 filled=True, rounded=True, leaves_parallel=True)
-""" 
-.replace('helvetica','"Microsoft YaHei"'), encoding='utf-8'
-上述 解決中文亂碼
+
+"""  解決中文亂碼
+    .replace('helvetica','"Microsoft YaHei"'), encoding='utf-8'
+
 """
 graph = graphviz.Source(dot_data.replace('helvetica','"Microsoft YaHei"'), encoding='utf-8') #格式
 graph.render("badminton") #檔名 存成pdf檔
